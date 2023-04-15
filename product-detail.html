@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All Products - RedStore</title>
+    <title>Products Details - RedStore</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -175,5 +175,22 @@
       </div>
     </div>
     <script src="javascript.js"></script>
+    <script>
+      const productImg = document.getElementById('product-img');
+      const smallImg = document.getElementsByClassName('small-img');
+
+      smallImg[0].onclick = function () {
+        productImg.src = smallImg[0].src;
+      };
+      smallImg[1].onclick = function () {
+        productImg.src = smallImg[1].src;
+      };
+      smallImg[2].onclick = function () {
+        productImg.src = smallImg[2].src;
+      };
+      smallImg[3].onclick = function () {
+        productImg.src = smallImg[3].src;
+      };
+    </script>
   </body>
 </html>

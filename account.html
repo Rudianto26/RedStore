@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cart - RedStore</title>
+    <title>Account - RedStore</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,78 +32,35 @@
       </div>
     </div>
 
-    <!-- cart items details -->
-    <div class="small-container cart-page">
-      <table>
-        <tr>
-          <th>Product</th>
-          <th>Quantity</th>
-          <th>Subtotal</th>
-        </tr>
-        <tr>
-          <td>
-            <div class="cart-info">
-              <img src="asset/buy-1.jpg" alt="" />
-              <div>
-                <p>Printed T-shirt</p>
-                <small>Price: $50.00</small>
-                <br />
-                <a href="">Remove</a>
+    <!-- account page -->
+    <div class="account-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img src="asset/image1.png" alt="" width="100%" />
+          </div>
+          <div class="col-2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span onclick="login()">Login</span>
+                <span onclick="register()">Register</span>
+                <hr id="indicator" />
               </div>
+              <form id="loginForm">
+                <input type="text" placeholder="Username" />
+                <input type="password" placeholder="Password" />
+                <button type="submit" class="btn">Login</button>
+                <a href="">Forgot password</a>
+              </form>
+              <form id="regForm">
+                <input type="text" placeholder="Username" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button type="submit" class="btn">Register</button>
+              </form>
             </div>
-          </td>
-          <td><input type="number" value="1" /></td>
-          <td>$50.00</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="cart-info">
-              <img src="asset/buy-2.jpg" alt="" />
-              <div>
-                <p>Printed T-shirt</p>
-                <small>Price: $75.00</small>
-                <br />
-                <a href="">Remove</a>
-              </div>
-            </div>
-          </td>
-          <td><input type="number" value="1" /></td>
-          <td>$75.00</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="cart-info">
-              <img src="asset/buy-3.jpg" alt="" />
-              <div>
-                <p>Printed T-shirt</p>
-                <small>Price: $60.00</small>
-                <br />
-                <a href="">Remove</a>
-              </div>
-            </div>
-          </td>
-          <td><input type="number" value="1" /></td>
-          <td>$60.00</td>
-        </tr>
-      </table>
-
-      <div class="total-price">
-        <table>
-          <tr>
-            <td>Subtotal</td>
-            <td>$185.00</td>
-          </tr>
-
-          <tr>
-            <td>Tax</td>
-            <td>$18.50</td>
-          </tr>
-
-          <tr>
-            <td>Total</td>
-            <td>$203.50</td>
-          </tr>
-        </table>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -147,5 +104,22 @@
       </div>
     </div>
     <script src="javascript.js"></script>
+    <script>
+      // form
+      const loginForm = document.getElementById('loginForm');
+      const regForm = document.getElementById('regForm');
+      const indicator = document.getElementById('indicator');
+
+      function register() {
+        regForm.style.transform = 'translateX(0px)';
+        loginForm.style.transform = 'translateX(0px)';
+        indicator.style.transform = 'translateX(100px)';
+      }
+      function login() {
+        regForm.style.transform = 'translateX(300px)';
+        loginForm.style.transform = 'translateX(300px)';
+        indicator.style.transform = 'translateX(0px)';
+      }
+    </script>
   </body>
 </html>
